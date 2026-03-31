@@ -1,12 +1,16 @@
-name: My First Workflow
+name: Multiple commands
 
 on:
   push:
 
 jobs:
-  hello:
+  commands:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Message
-        run: echo "Hello from GitHub Actions"
+      - name: show date
+        run: date
+      - name: show current folder
+        run: pwd
+      - name: show files.
+        run: ls -la
